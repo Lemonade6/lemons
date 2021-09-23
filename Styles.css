@@ -1,9 +1,12 @@
+/*heres my style sheet*/
 body {
   background-color: powderblue;
 }
+/* here is setting the colour for the first heading on the website, set as blue*/
 h1 {
   color: blue;
 }
+/* here is the border around my first heading on the website, it is connected via a link in the html file*/
 p {
       border: 2px solid black;
         padding: 30px;
