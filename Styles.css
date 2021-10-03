@@ -2,10 +2,8 @@
 body {
   background-color: white;
 }
-/* here is setting the colour for the first heading on the website, set as blue*/
-h1 {
-  color: green;
-}
+
+
 /* here is the border around my first heading on the website, it is connected via a link in the html file*/
 p {
       border: 2px solid black;
@@ -13,4 +11,11 @@ p {
 }
 p {
       color: red;
+}
+/*.main{
+  background: url(./imgs/pets2.jpeg)no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: 30%;
+  width: 145%;
 }
