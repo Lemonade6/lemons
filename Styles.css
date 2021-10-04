@@ -12,6 +12,11 @@ p {
 p {
       color: red;
 }
+
+.nav-wrapper {
+  width: 100%;
+}
+
 /*.main{
   background: url(./imgs/pets2.jpeg)no-repeat;
   background-size: cover;

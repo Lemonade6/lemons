@@ -13,7 +13,7 @@
     <!--creating our navbar by using nav tags, setting the size to large and setting the background to secondary-->    
  <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
          <!-- creating a container class to contain the navbar content -->
-   <div class="constainer">
+   <div class="container">
            <!-- using an a tag to add the logo img and name-->
         <a class="navbar-brand" href="#">
                 <!--here weve got our logo sourced from img file-->
@@ -32,28 +32,31 @@
         </button>
         <!-- creating an ID tag to be able to call the button to collapse nav menu-->
         <div class="collapse navbar-collapse" id="navmenu">
-             <ul class="navbar-nav">
-                     <!--creating lists of hyperlinks for the nav menu-->
-                <li class="nav-item">
-                        <!--inside the href contains a link to our pet essential page-->
-                        <a href="#" class="nav-link">pet essentials</a>      
-                      </li> 
-                <li class="nav-item">
-                        <!--inside the href contains a link to our contact information page-->
-                        <a href="#" class="nav-link">contact us</a>      
-                      </li> 
-                <li class="nav-item">
-                        <!--inside our href contains a link to our about us information page-->
-                  <a href="#" class="nav-link">About us</a>      
-                </li>     
-             </ul>   
+                <div class="nav-wrapper d-flex justify-content-start justify-content-lg-end">
+                        <ul class="navbar-nav">
+                                <!--creating lists items with hyperlinks for the nav menu-->
+                                <li class="nav-item">
+                                        <!--inside the href contains a link to our pet essential page-->
+                                        <a href="#" class="nav-link">pet essentials</a>      
+                                </li> 
+                                <li class="nav-item">
+                                        <!--inside the href contains a link to our contact information page-->
+                                        <a href="#" class="nav-link">contact us</a>      
+                                </li> 
+                                <li class="nav-item">
+                                        <!--inside our href contains a link to our about us information page-->
+                                <a href="#" class="nav-link">About us</a>      
+                                </li>     
+                        </ul>
+                </div>   
         </div>
    </div>
         
                 
   </nav> 
   <section class="bg-white text-dark p-1">
-          <div class="container">
+          <!--creating a fluid container for the image to cover full width-->
+          <div class="container-fluid">
                   <div>
                           <div>
                                   <h1>Dont have a pet?</h1>
