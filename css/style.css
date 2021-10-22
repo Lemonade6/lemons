@@ -7,7 +7,7 @@ html,body{
 h1{
 	font-size: 30px;
 }
-
+/*setting our button dark to orange*/
 .btn-dark{
 	background: #eebd33!important;
 	border: 1px solid #eebd33!important;
@@ -87,6 +87,7 @@ h1{
 .contact h1{
 	margin-top: 100px;
 }
+/* setting the margin of to the bottom 20px*/
 .contact .form-control{
 	margin-bottom: 20px;
 	border: 1px solid #000;

@@ -63,7 +63,15 @@
     </div>
   </div>
   </nav>
-
+<script>
+  function validateForm() {
+  let x = document.forms["c-form"]["name"].value;
+  if (x == "null") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
 <!-- Main contact form  -->
 <!--This code has been taken from w3schools/ https://www.w3schools.com/js/js_validation.asp-->
 <div class="contact">
@@ -76,7 +84,7 @@
     <input type="text" name="" id="name" class="form-control rounded-0" placeholder="Name" required="">
     <span id="nameError"></span>
     <!--email input-->
-    <input type="text" name="" id="email" class="form-control rounded-0" placeholder="Email" required="">
+    <input type="text" name="name" id="email" class="form-control rounded-0" placeholder="Email" required="">
     <span id="emailError"></span>
     <!--phone number input-->
     <input type="number" id="phone" name="" class="form-control rounded-0" placeholder="Phone Number" required="">
