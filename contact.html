@@ -65,17 +65,25 @@
   </nav>
 
 <!-- Main contact form  -->
+<!--This code has been taken from w3schools/ https://www.w3schools.com/js/js_validation.asp-->
 <div class="contact">
+  <!--creating a .container class-->
 <div class="container contact-form">
   <h1 class="mb-5 text-center">CONTACT US</h1>
+  <!--creating a form tag to include my input fields-->
   <form action="" id="c-form">
+    <!--creating an input tag for our name input-->
     <input type="text" name="" id="name" class="form-control rounded-0" placeholder="Name" required="">
     <span id="nameError"></span>
+    <!--email input-->
     <input type="text" name="" id="email" class="form-control rounded-0" placeholder="Email" required="">
     <span id="emailError"></span>
+    <!--phone number input-->
     <input type="number" id="phone" name="" class="form-control rounded-0" placeholder="Phone Number" required="">
     <span id="phoneError"></span>
+    <!--message input-->
     <textarea name="" id="" rows="6" placeholder="Message" class="form-control" ></textarea>
+    <!--creating a button tag with type submit so that we can submit our message-->
     <button type="submit" class="btn btn-dark">Send Message</button>
   </form>
 </div>
@@ -107,7 +115,7 @@ $(document).ready(function(){
 // regular expression for mobile no
 var phoneno = /^\d{10}$/;
 
-// form submi event
+// form submit event
   $('#c-form').on('submit' , function (e){
      // prevent to load page 
     e.preventDefault(); 

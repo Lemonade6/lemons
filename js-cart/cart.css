@@ -1,16 +1,21 @@
 /* (A) ENTIRE PAGE */
+
+/*setting font family of cart-wrap*/
 #cart-wrap {
   font-family: arial, sans-serif;
   display: flex;
   margin: 0 auto;
   max-width: 1000px;
 }
+/*creating a box sizing and setting to border-box for the item */
 #cart-products, #cart-items {
   box-sizing: border-box;
   padding: 10px;
 }
+/*cart products*/
 #cart-products { width: 70%; }
 #cart-items { width: 30%; }
+/* setting cart button with padding*/
 input.cart, button.cart {
   padding: 10px;
   border: 0;
@@ -20,7 +25,7 @@ input.cart, button.cart {
   cursor: pointer;
 }
 
-/* (B) PRODUCTS LIST */
+/* Styling the products list*/
 #cart-products {
   display: grid;
   grid-template-columns: auto auto;
