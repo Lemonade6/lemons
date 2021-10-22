@@ -1,72 +1,205 @@
 <!DOCTYPE html>
-<html lang="eng">
-   <head>
-      <!-- Latest compiled and minified CSS -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-      <!-- Latest compiled JavaScript -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-      <link rel="stylesheet" href="Styles.css">
-   <title>Pet Express</title>
-   </head>
+<html lang="en">
+<head>
+  <title>PetExpress</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-    <!--creating our navbar by using nav tags, setting the size to large and setting the background to secondary-->    
- <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
-         <!-- creating a container class to contain the navbar content -->
-   <div class="container">
-           <!-- using an a tag to add the logo img and name-->
-        <a class="navbar-brand" href="#">
-                <!--here weve got our logo sourced from img file-->
-                <img src="imgs/petexpress.png" alt="Logo" style="width:40px;" class="rounded-pill">Pet Express
-              </a>
-              <!-- here were creating a button for our nav menu this will allow us to collapse our navmenu-->
-        <button 
-        class="navbar-toggler" 
-        type="button" 
-        data-bs-toggle="collapse"
-        data-bs-target="#navmenu"
-        >
-        <!-- here were creating the hamburger icon-->
-        <span class="navbar-toggler-icon"></span>
-         
-        </button>
-        <!-- creating an ID tag to be able to call the button to collapse nav menu-->
-        <div class="collapse navbar-collapse" id="navmenu">
-                <div class="nav-wrapper d-flex justify-content-start justify-content-lg-end">
-                        <ul class="navbar-nav">
-                                <!--creating lists items with hyperlinks for the nav menu-->
-                                <li class="nav-item">
-                                        <!--inside the href contains a link to our pet essential page-->
-                                        <a href="#" class="nav-link">pet essentials</a>      
-                                </li> 
-                                <li class="nav-item">
-                                        <!--inside the href contains a link to our contact information page-->
-                                        <a href="#" class="nav-link">contact us</a>      
-                                </li> 
-                                <li class="nav-item">
-                                        <!--inside our href contains a link to our about us information page-->
-                                <a href="#" class="nav-link">About us</a>      
-                                </li>     
-                        </ul>
-                </div>   
-        </div>
-   </div>
-        
+<header>
+  <!-- creating a nav tag with a class of Navbar and expand on medium-->
+	<nav class="navbar navbar-expand-md navbar-dark">
+    <!--creating a .container class-->
+<div class="container">
+	  <!--Creating an a tag with a class navbar-brand -->
+  <a class="navbar-brand" href="#">PetExpress</a>
+
+  <!-- Creating a button with class navbar-toggler, to collapse the navbar, 
+
+    type: button: setting the type of toggle to button, 
+
+    data-toggle="collapse"; setting the toggle to collapse, 
+
+    data-target="#Navbar";setting the target to Navbar (id=Navbar) -->
+  <button class="navbar-toggler" 
+    type="button" 
+    data-toggle="collapse" 
+    data-target="#Navbar"
+    >
+    <!--creating Navbar burger Icon-->
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+    <!-- creating a class collapse with navbar-collapse, to collapse the navbar links with id of the toggle target-->
+  <div class="collapse navbar-collapse" id="Navbar">
+      <!-- creating an unordered list tag with class navbar-nav for our nav items  -->
+    <ul class="navbar-nav ml-auto">
+      <!-- creating a list tag with class nav item to then link our pages-->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="About us.html">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="js-cart/cart.html">Buy A Pet!</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact us</a>
+      </li>
+      <!-- li tag for the cart-->
+      <li class="nav-item ml-5">
+        <!--creating a button using a tag to link cart page-->
+        <a class="nav-link btn btn-dark" href="js-cart/cart.html" style="background: #eebd33;">
+          <!--from the font awesome link , using shoping cart icon-->
+          <i class="fa fa-shopping-cart" style="font-size:22px;color:red"></i>  Check Cart
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+<!-- Main showcase start -->
+<!--creating a class name showcase to link to css-->
+<div class="Showcase">
+	<div class="overlay"></div>
+	<div class="showcase-content">
+    <!--creating a div class with name main heading to be able to position it in the css file -->
+		<div class="main_heading">
+			<h1>Welcome To PetExpress!</h1>
+		<p>Need Your Pet Essentials ?</p>
+        <!--creating a div with class text-center to center whats inside in our case button-->
+				<div class="text-center">
+          <!-- creating an a tag link to our cart-->
+			<a href="js-cart/cart.html" class="btn btn-dark rounded-0 px-5 py-2" style="background:#eebd33">Shop Now</a>
+		</div>
+		</div>
+
+	</div>
+</div>
+</header>
+
+<section id="adoption-home3" class="container-fluid pl-0 pr-0 py-5">
+  <!-- section heading -->  
+  <div class="section-heading text-center">
+      <!-- main-title -->
+     <h1>Never thought of adoption?</h1>
+     
+     <h2>Think Again!</h2>
+  </div>
+  <!-- 2 section-heading -->
+  <div class="container">
+      <!--creating a div and setting the grid col-lg-10 with text center -->
+     <div class="col-lg-10 offset-lg-1 text-center">
+       <!--heading-->
+        <h3>Adopting is an act of <span class="text-tertiary" style="color: #F16101;;">love</span></h3>
+        <p>At PetExpress we think all pets deserve a home. Thats why we offer a readoption program, when able to do so. All Pets Deserve a home!</p>
+     </div>
+     
+     <div class="row mt-4">
+        <div class="col-lg-6">
+           <!-- creating a class Adopt card for our pet cards  -->
+           <div class="adopt-card res-margin row bg-light pattern2">
+              <div class="col-md-5">
+                 <!-- creating an adopt-image class with a flex box container -->
+                 <div class="adopt-image d-flex flex-wrap align-items-center ">
+                   <!--creating an A tag link to link our image-->
+                    <a href="">
+                        <!--using img tags to access image from scr and setting the img-fluid-->
+                    <img src="images/doggs.webp" class="img-fluid" alt="">
+                    </a>
+                 </div>
+              </div>
+              <div class="col-md-7 res-margin">
+                 <!-- Name -->
+                   <!-- Adopt card one ypu can see all information and see pets -->
+                 <div class="caption-adoption">
+                    <h5 class="adoption-header"><a href="">Magdalene</a></h5>
+                    <!-- List -->
+                    <ul class="list-unstyled">
+                        <!-- this all names is a pets and show age etc -->
+                       <li><strong>Gender:</strong> Female</li>
+                       <li><strong>Age:</strong> 2 years</li>
+                       <li><strong>Breed:</strong> Poodle Mix</li>
+                    </ul>
+                 </div>
+              </div>
+              <div class="col-md-12 mt-3">
+                 <!-- Button -->	
+                 <div class="text-center">
+                    <!-- Adopt info you can see all details and check-->
                 
-  </nav> 
-  <section class="bg-white text-dark p-1">
-          <!--creating a fluid container for the image to cover full width-->
-          <div class="container-fluid">
-                  <div>
-                          <div>
-                                  <h1>Dont have a pet?</h1>
-                                  
-                          </div>
-                          <img class="img-fluid" src="imgs/pets2.jpeg" alt="">
-                  </div>
-          </div>
+                    <ul class="col-md-12 adopt-card-info list-unstyled">
+                       <li>special needs</li>
+                       <li>Friendly to other pets</li>
+                    </ul>
+                    <!-- creating a button to link to the contact us page-->
+                    <a href="contact.html" class="btn btn btn-warning">More Info</a>
+                 </div>
+                 
+              </div>
+              
+           </div>
+           
+        </div>
+        <!-- Adopt 2 -->
+        <div class="col-lg-6">
+           <div class="adopt-card res-margin row bg-light pattern2">
+              <div class="col-md-5">
+                 <!-- creating with a flex box with items aligning center-->
+                 <div class="adopt-image d-flex flex-wrap align-items-center ">
+                    <a href="">
+                        <!-- pets 2nd images -->
+                      <img src="images/product-2.webp" class="img-fluid" alt="">
+                    </a>
+                 </div>
+              </div>
+              <div class="col-md-7 res-margin">
+                 <!-- Name -->
+                 <div class="caption-adoption">
+                    <h5 class="adoption-header"><a href="">Leelo</a></h5>
+                    <!-- List -->
+                    <ul class="list-unstyled">
+                          <!-- this all names is a pets and show age etc -->
+                       <li><strong>Gender:</strong> Male</li>
+                       <li><strong>Age:</strong> 7 years</li>
+                       <li><strong>Breed:</strong> Mixed</li>
+                    </ul>
+                 </div>
+              </div>
+              <div class="col-md-12 mt-3">
+                 <!-- Button -->	
+                 <div class="text-center">
+                    <!-- Adopt info -->
+                    <ul class="col-md-12 adopt-card-info list-unstyled">
+                       <li>Vaccinated</li>
+                       <li>Friendly to other pets</li>
+                    </ul>
+                    <!-- button-->
+                    <a href="About-us.html" class="btn btn btn-warning">More Info</a>
+                 </div>
+                 
+              </div>
+              
+           </div>
+           
+ </section>
 
-
-  </section>
-
-  
+<!--Creating my Page Footer and setting the colour to secondary-->
+<footer class="bg-secondary">
+  <!--creating a .container class-->
+  <div class="container">
+    <!-- using p tags and using a class of set bottom margin -0 -->
+    <p class="mb-0">© COPYRIGHT 2021 PetExpress</p>
+  </div>
+</footer>
+<!-- required js files for bootstrap  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

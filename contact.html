@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PetExpress</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <!-- creating a nav tag with a class of Navbar and expand on medium-->
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <!--creating a .container class-->
+  <div class="container">
+      <!--Creating an a tag with a class navbar-brand -->
+    <a class="navbar-brand" href="#">PetExpress</a>
+  
+    <!-- Creating a button with class navbar-toggler, to collapse the navbar, 
+  
+      type: button: setting the type of toggle to button, 
+  
+      data-toggle="collapse"; setting the toggle to collapse, 
+  
+      data-target="#Navbar";setting the target to Navbar (id=Navbar) -->
+    <button class="navbar-toggler" 
+      type="button" 
+      data-toggle="collapse" 
+      data-target="#Navbar"
+      >
+      <!--creating Navbar burger Icon-->
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Navbar links -->
+      <!-- creating a class collapse with navbar-collapse, to collapse the navbar links with id of the toggle target-->
+    <div class="collapse navbar-collapse" id="Navbar">
+        <!-- creating an unordered list tag with class navbar-nav for our nav items  -->
+      <ul class="navbar-nav ml-auto">
+        <!-- creating a list tag with class nav item to then link our pages-->
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="About us.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="js-cart/cart.html">Buy A Pet!</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact us</a>
+        </li>
+        <!-- li tag for the cart-->
+        <li class="nav-item ml-5">
+          <!--creating a button using a tag to link cart page-->
+          <a class="nav-link btn btn-dark" href="js-cart/cart.html" style="background: #eebd33;">
+            <!--from the font awesome link , using shoping cart icon-->
+            <i class="fa fa-shopping-cart" style="font-size:22px;color:red"></i>  Check Cart
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+<!-- Main contact form  -->
+<div class="contact">
+<div class="container contact-form">
+  <h1 class="mb-5 text-center">CONTACT US</h1>
+  <form action="" id="c-form">
+    <input type="text" name="" id="name" class="form-control rounded-0" placeholder="Name" required="">
+    <span id="nameError"></span>
+    <input type="text" name="" id="email" class="form-control rounded-0" placeholder="Email" required="">
+    <span id="emailError"></span>
+    <input type="number" id="phone" name="" class="form-control rounded-0" placeholder="Phone Number" required="">
+    <span id="phoneError"></span>
+    <textarea name="" id="" rows="6" placeholder="Message" class="form-control" ></textarea>
+    <button type="submit" class="btn btn-dark">Send Message</button>
+  </form>
+</div>
+</div>
+
+<!--Creating my Page Footer and setting the colour to secondary-->
+<footer class="bg-secondary">
+  <!--creating a .container class-->
+  <div class="container">
+    <!-- using p tags and using a class of set bottom margin -0 -->
+    <p class="mb-0">© COPYRIGHT 2021 PetExpress</p>
+  </div>
+</footer>
+</footer>
+<!-- required js files for botstrap  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+<script>
+$(document).ready(function(){
+   function validateEmail($email) {
+    // Regular expression for email
+  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+  // test email 
+  return emailReg.test( $email );
+}
+// regular expression for mobile no
+var phoneno = /^\d{10}$/;
+
+// form submi event
+  $('#c-form').on('submit' , function (e){
+     // prevent to load page 
+    e.preventDefault(); 
+    // check if value of name is empty or null 
+    if ($('#name').val()=="" || $('#name').val()=="NULL") {
+      // set error text if email value is empty or null 
+      $('#nameError').text('Name is Required!!');
+    }
+
+    // check if value of email is empty or null
+      else if($('#email').val()=="" || $('#email').val()=="NULL" ){
+      $('#emailError').text('Email is Required!!');
+
+      }
+      // check if input of email is not matched with above email regular expression
+      else if(!validateEmail($('#email').val())){
+        // se email error if email is not matched with R.E
+      $('#emailError').text('Email invalid!!');
+
+      }
+
+      // check if value of name is empty or null
+
+      else if($('#phone').val()=="" || $('#phone').val()=="NULL" ){
+      $('#phoneError').text('Phone Number is required is Required!!');
+
+      }
+
+  })
+})
+</script>
